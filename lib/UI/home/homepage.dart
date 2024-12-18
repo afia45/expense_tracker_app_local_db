@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
             elevation: 0,
             backgroundColor: white,
             title: GradientText(
-              "Expense Manager",
+              "Expense Tracker",
               gradient: LinearGradient(
                 colors: [
                   teal,
