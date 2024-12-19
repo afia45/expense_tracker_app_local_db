@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../utils/colors.dart';
 import '../UI/budget/budget_provider.dart';
 import '../models/model.dart';
+import 'package:intl/intl.dart';
 
 class AddListProvider extends ChangeNotifier {
   //Variables
@@ -19,6 +20,24 @@ class AddListProvider extends ChangeNotifier {
     _filteredTransactions = transactions;
     notifyListeners();
   }
+
+  void refreshTransactions() {
+  // Reapply filtering or fetch the latest list
+  _filteredTransactions = incomeTextFormValues.value.toList(); // or fetch from database
+  notifyListeners(); // Ensure UI updates
+}
+
+void refreshTransactionsAndFilter(DateTime currentDate) {
+  // Reapply filtering or fetch the latest list
+  _filteredTransactions = incomeTextFormValues.value.where((transaction) {
+    final transactionDate = DateFormat('EEE, MMM d, yyyy').parse(transaction.currentDate);
+    return transactionDate.month == currentDate.month &&
+        transactionDate.year == currentDate.year;
+  }).toList();
+  notifyListeners(); // Ensure UI updates
+}
+
+
   //!
   //Functions
   //ADDING THE INCOME TRANSACTION TO THE HOME PAGE
@@ -30,7 +49,9 @@ class AddListProvider extends ChangeNotifier {
     incomeTextFormValues.value.add(value);
     incomeHome += value.incomeAmount;
     balanceHome += value.incomeAmount;
+    refreshTransactions();
     getHomeElements();
+    
     notifyListeners();
   }
 
@@ -44,7 +65,9 @@ class AddListProvider extends ChangeNotifier {
     incomeTextFormValues.value.add(value);
     balanceHome = balanceHome - value.expenseAmount;
     expenseHome += value.expenseAmount;
+    refreshTransactionsAndFilter(DateTime.now()); // Pass the currentDate
     getHomeElements();
+    
     notifyListeners();
   }
 
@@ -67,6 +90,8 @@ class AddListProvider extends ChangeNotifier {
     }
     incomeTextFormValues.value.addAll(incomeExpenseList);
     isIncomeExpenseDataLoading = false;
+    refreshTransactions();
+    refreshTransactionsAndFilter(DateTime.now()); // Pass the currentDate
     notifyListeners();
   }
 
@@ -81,7 +106,10 @@ class AddListProvider extends ChangeNotifier {
     indexOfCategory!.selectedIndexHome == 1
         ? indexOfCategory.expenseAmount = 0
         : indexOfCategory.incomeAmount = 0;
+    
+    refreshTransactionsAndFilter(DateTime.now()); // Pass the currentDate
     getHomeElements();
+    
     notifyListeners();
   }
 
@@ -99,7 +127,9 @@ class AddListProvider extends ChangeNotifier {
         incomeTextFormValues.value.indexWhere((element) => element.id == id);
     if (index != -1) {
       incomeTextFormValues.value.removeAt(index);
+      refreshTransactionsAndFilter(DateTime.now()); // Pass the currentDate
       getHomeElements();
+      
       incomeTextFormValues.notifyListeners();
     }
   }

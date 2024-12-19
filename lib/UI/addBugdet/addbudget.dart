@@ -102,7 +102,7 @@ class _AddBudgetState extends State<AddBudget> {
                                 TextButton(
                                   onPressed: () {
                                     // Close the dialog without doing anything
-                                    Navigator.pop(context);
+                                    Navigator.pop(context, true);
                                   },
                                   child: const Text("No",
                                       style: TextStyle(color: Colors.red)),
@@ -859,7 +859,7 @@ class _AddBudgetState extends State<AddBudget> {
                                 snapshot3.categoryRemaining();
                                 snapshot.totalRemaining(context);
                               }
-                              Navigator.pop(context);
+                              Navigator.pop(context, true);
                             },
                             child: Text(
                               "Update",
@@ -943,7 +943,7 @@ class _AddBudgetState extends State<AddBudget> {
                                 snapshot3.categorySpends();
                                 snapshot3.categoryRemaining();
                               }
-                              Navigator.pop(context);
+                              Navigator.pop(context, true);
                             },
                             child: Text(
                               "Save",
