@@ -5,6 +5,7 @@ import '../utils/colors.dart';
 import '../UI/budget/budget_provider.dart';
 import '../models/model.dart';
 import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AddListProvider extends ChangeNotifier {
   //Variables
@@ -12,6 +13,9 @@ class AddListProvider extends ChangeNotifier {
   int expenseHome = 0;
   int balanceHome = 0;
   ValueNotifier<List<ValueOfTextForm>> incomeTextFormValues = ValueNotifier([]);
+  bool _isDarkTheme = false;
+  bool get isDarkTheme => _isDarkTheme;
+  String _pin = "";
   // ! Filtered transactions list
   List<ValueOfTextForm> _filteredTransactions = [];
   List<ValueOfTextForm> get filteredTransactions => _filteredTransactions;
@@ -39,6 +43,27 @@ void refreshTransactionsAndFilter(DateTime currentDate) {
 
 
   //!
+  //Dark Theme
+  Future<void> toggleTheme() async {
+    _isDarkTheme = !_isDarkTheme;
+    notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool("isDarkTheme", _isDarkTheme);
+  }
+
+  //PIN
+   Future<void> savePin(String pin) async {
+    _pin = pin;
+    notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString("pin", _pin);
+  }
+
+  Future<String?> getPin() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString("pin");
+  }
+
   //Functions
   //ADDING THE INCOME TRANSACTION TO THE HOME PAGE
   Future<void> addingIncome(ValueOfTextForm value, BuildContext context) async {

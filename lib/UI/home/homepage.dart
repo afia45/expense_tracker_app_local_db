@@ -357,38 +357,41 @@ class _HomePageState extends State<HomePage> {
                   snapshot.isIncomeExpenseDataLoading
                       ? const CircularProgressIndicator()
                       : snapshot.incomeTextFormValues.value.isEmpty
-                          ? Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  width: double.infinity,
-                                  height: height * 0.3,
-                                  child: Image.asset(
-                                    "asset/images/HOMEPAGE.png",
-                                    fit: BoxFit.fill,
+                          ? SingleChildScrollView(
+                            child: Column(
+                              
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    width: double.infinity,
+                                    height: height * 0.26,
+                                    child: Image.asset(
+                                      "asset/images/homepage.png",
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(
-                                  height: 20,
-                                ),
-                                Text(
-                                  "No Transactions",
-                                  style: TextStyle(
-                                      color: black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "Tap on '+' to add Income/Expense",
-                                  style: TextStyle(
-                                    color: primary,
+                                  const SizedBox(
+                                    height: 20,
                                   ),
-                                ),
-                              ],
-                            )
+                                  Text(
+                                    "No Transactions",
+                                    style: TextStyle(
+                                        color: black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Tap on '+' to add Income/Expense",
+                                    style: TextStyle(
+                                      color: primary,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                          )
                           : Expanded(
                               child: Column(
                                 children: [
