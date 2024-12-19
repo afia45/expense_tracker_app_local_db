@@ -61,6 +61,6 @@ flutter run
 ```
 
 ### Presentation Slide
-- [App Screen Recording](path/to/splashscreen-recording.mp4)
+- [Presentation Slide](path/to/splashscreen-recording.mp4)
 
 
