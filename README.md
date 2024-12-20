@@ -65,6 +65,6 @@ flutter run
 ```
 
 ### Presentation Slide
-- [Presentation Slide](path/to/splashscreen-recording.mp4)
+- [Presentation Slide](asset/Pouch_Planner(1).pdf)
 
 
