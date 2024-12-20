@@ -23,7 +23,7 @@ Pouch Planner is an intuitive expense tracker app designed to help users manage 
 
 ## Screen Recordings
 
-- [App Screen Recording](path/to/splashscreen-recording.mp4)
+- [App Screen Recording](https://drive.google.com/file/d/11rtwWQE3fnGO07l7elz-ZVp94QnLo840/view?usp=sharing)
 
 ## Project Setup
 
