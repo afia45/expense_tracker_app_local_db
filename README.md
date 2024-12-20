@@ -19,7 +19,11 @@ Pouch Planner is an intuitive expense tracker app designed to help users manage 
 ![Screen shots](asset/images/ss2.png)
 ![Screen shots](asset/images/ss1.png)
 
-
+### Languages, tools, framework & Database
+- Dart
+- Android Studio/VS Code
+- Flutter
+- Hive (lightweight NoSQL database)
 
 ## Screen Recordings
 
@@ -37,19 +41,19 @@ Follow the steps below to set up and run this project locally:
 
 ### Dependencies
 *dependencies*
--  provider
--  pie_chart
--  intl
--  shared_preferences
--  hive
--  hive_flutter
--  device_preview
--  fl_chart
+-  provider - A state management solution for managing and listening to app state changes.
+-  pie_chart - A widget library for creating visually appealing pie charts.
+-  intl - Provides internationalization and localization utilities, including date and number formatting.
+-  shared_preferences - Stores simple key-value pairs locally on the device for persistent user settings.
+-  hive - A lightweight and fast NoSQL database for local data storage.
+-  hive_flutter - Hive integration with Flutter for seamless database usage.
+-  device_preview - Enables testing and previewing the app on different devices and screen sizes.
+-  fl_chart - A chart library for creating beautiful and customizable charts, such as line and bar graphs.
 
 
 *dev_dependencies:*
--  hive_generator
--  build_runner
+-  hive_generator - Generates Hive type adapters for custom objects automatically.
+-  build_runner -  A code generation tool used to generate files, such as Hive type adapters, at build time.
 
 ### Clone the Repository
 
