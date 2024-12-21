@@ -33,7 +33,7 @@ Pouch Planner is an intuitive expense tracker app designed to help users manage 
 - Flutter
 - Hive (lightweight NoSQL database)
 
-## Screen Recordings
+## 🔗 Screen Recordings
 
 - [App Screen Recording](https://drive.google.com/file/d/11rtwWQE3fnGO07l7elz-ZVp94QnLo840/view?usp=sharing)
 
@@ -72,7 +72,7 @@ flutter pub get
 flutter run
 ```
 
-### Presentation Slide
+### 🔗 Presentation Slide
 - [Presentation Slide](asset/Pouch_Planner.pdf)
 
 
