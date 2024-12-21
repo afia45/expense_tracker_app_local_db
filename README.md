@@ -2,9 +2,15 @@
 
 <img src="asset/images/ic_launcher.png" alt="Homepage" width="60" height="60">
 Pouch Planner is an intuitive expense tracker app designed to help users manage and monitor their finances. The app provides essential features like setting a budget, viewing statistics, and managing various expenses through an easy-to-use interface. It also offers a smooth navigation experience with a bottom navigation bar for quick access to different app sections, including the Home page, Budget page, Statistics page, Settings page, and a Splash Screen on startup.
+<br />
+<br />
 
-*This app was made in order to submit it as a final project for my Mobile App Development Course organized by EDGE Digital Training Skills for Students Program, IIUC, to my Instructor Noor Mohammed Anik Sir, Batch CBI-018.*
+> [!NOTE]
+> This app was made in order to submit it as a final project for my Mobile App Development Course organized by EDGE Digital Training Skills for Students Program, IIUC, to my Instructor Noor Mohammed Anik Sir, Batch CBI-018.
 
+<!--```diff
+@@ This app was made in order to submit it as a final project for my Mobile App Development Course organized by EDGE Digital Training Skills for Students Program, IIUC, to my Instructor Noor Mohammed Anik Sir, Batch CBI-018. @@
+```-->
 ## Features
 
 - **Splash Screen**: Displays an animated logo that grows and shrinks during app startup.
