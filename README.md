@@ -1,4 +1,4 @@
-# Pouch Planner - Expense Tracker 
+# Pouch Planner - An Expense Tracker App
 
 <img src="asset/images/ic_launcher.png" alt="Homepage" width="60" height="60">
 Pouch Planner is an intuitive expense tracker app designed to help users manage and monitor their finances. The app provides essential features like setting a budget, viewing statistics, and managing various expenses through an easy-to-use interface. It also offers a smooth navigation experience with a bottom navigation bar for quick access to different app sections, including the Home page, Budget page, Statistics page, Settings page, and a Splash Screen on startup.
@@ -65,6 +65,6 @@ flutter run
 ```
 
 ### Presentation Slide
-- [Presentation Slide](asset/Pouch_Planner(1).pdf)
+- [Presentation Slide](asset/Pouch_Planner.pdf)
 
 
